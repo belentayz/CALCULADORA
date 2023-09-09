@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author labor
@@ -55,6 +54,11 @@ public class calculadora_iu extends javax.swing.JFrame {
         });
 
         btnrestar.setText("RESTAR");
+        btnrestar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnrestarActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("MULTIPLICAR");
 
@@ -111,11 +115,19 @@ public class calculadora_iu extends javax.swing.JFrame {
 
     private void btnsumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsumarActionPerformed
         // TODO add your handling code here:
-        double nro1= Double.parseDouble(txtnro1.getText());
-        double nro2= Double.parseDouble(txtnro2.getText());
-        double sumar= nro1+nro2;
+        double nro1 = Double.parseDouble(txtnro1.getText());
+        double nro2 = Double.parseDouble(txtnro2.getText());
+        double sumar = nro1 + nro2;
         JOptionPane.showMessageDialog(this, "la suma es:" + sumar);
     }//GEN-LAST:event_btnsumarActionPerformed
+
+    private void btnrestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrestarActionPerformed
+        // TODO add your handling code here:
+        double nro1 = Double.parseDouble(txtnro1.getText());
+        double nro2 = Double.parseDouble(txtnro2.getText());
+        double resta = nro1 - nro2;
+        JOptionPane.showMessageDialog(this, "la resta es:" + resta);
+    }//GEN-LAST:event_btnrestarActionPerformed
 
     /**
      * @param args the command line arguments
